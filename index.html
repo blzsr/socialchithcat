@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Chit Chat</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FFFFFF;
+            color: #333;
+        }
+
+        header {
+            background-color: #FF6F61;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-family: 'Poppins', sans-serif;
+            color: #FFFFFF;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #FFFFFF;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .hero {
+            background: url('background-image.jpg') no-repeat center center;
+            background-size: cover;
+            text-align: center;
+            padding: 100px 20px;
+            color: #FFFFFF;
+        }
+
+        .hero h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3em;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+
+        .hero button {
+            background-color: #FFEB3B;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .hero button:hover {
+            background-color: #FFC107;
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px 20px;
+            background-color: #F5F5F5;
+        }
+
+        .feature {
+            text-align: center;
+            max-width: 200px;
+        }
+
+        .feature img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .feature h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+
+        footer {
+            background-color: #FF6F61;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer a {
+            color: #FFFFFF;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Social Chit Chat</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#features">Features</a>
+            <a href="#community">Community</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <section class="hero">
+        <h2>Welcome to Social Chit Chat</h2>
+        <p>A safe and fun place for everyone to socialize.</p>
+        <button>Join Our Discord</button>
+    </section>
+    <section class="features" id="features">
+        <div class="feature">
+            <img src="safe-icon.png" alt="Safe Environment">
+            <h3>Safe Environment</h3>
+            <p>Our server is moderated to ensure a safe space for all members.</p>
+        </div>
+        <div class="feature">
+            <img src="inclusive-icon.png" alt="Inclusive Community">
+            <h3>Inclusive Community</h3>
+            <p>Everyone is welcome here, regardless of background.</p>
+        </div>
+        <div class="feature">
+            <img src="events-icon.png" alt="Fun Events">
+            <h3>Fun Events</h3>
+            <p>We host regular events to keep the community engaged and entertained.</p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Social Chit Chat. All rights reserved.</p>
+        <p>
+            <a href="#terms">Terms of Service</a> |
+            <a href="#privacy">Privacy Policy</a>
+        </p>
+    </footer>
+</body>
+
+</html>
