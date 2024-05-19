@@ -6,24 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Social Chit Chat</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #FFFFFF;
+            background-color: #f0f2f5;
             color: #333;
+            scroll-behavior: smooth;
         }
 
         header {
-            background-color: #FF6F61;
+            background-color: #207F7A;
             padding: 20px;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         header h1 {
             font-family: 'Poppins', sans-serif;
             color: #FFFFFF;
+            margin: 0;
         }
 
         nav {
@@ -37,14 +44,24 @@
             margin: 0 15px;
             text-decoration: none;
             font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #A0E7E5;
         }
 
         .hero {
-            background: url('background-image.jpg') no-repeat center center;
-            background-size: cover;
             text-align: center;
-            padding: 100px 20px;
-            color: #FFFFFF;
+            padding: 150px 20px;
+            color: #207F7A;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
         }
 
         .hero h2 {
@@ -59,34 +76,57 @@
         }
 
         .hero button {
-            background-color: #FFEB3B;
+            background-color: #207F7A;
             border: none;
             padding: 15px 30px;
             font-size: 1em;
             font-weight: bold;
+            color: #FFFFFF;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.3s;
         }
 
         .hero button:hover {
-            background-color: #FFC107;
+            background-color: #185F5B;
+            transform: scale(1.1);
+        }
+
+        .section {
+            padding: 50px 20px;
         }
 
         .features {
             display: flex;
             justify-content: space-around;
             padding: 50px 20px;
-            background-color: #F5F5F5;
+            background-color: #FFFFFF;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 15px 15px 0 0;
+            position: relative;
+            z-index: 1;
+            flex-wrap: wrap;
         }
 
         .feature {
             text-align: center;
-            max-width: 200px;
+            max-width: 250px;
+            padding: 20px;
+            margin: 10px;
+            transition: transform 0.3s;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: slideInUp 1s ease-in-out;
         }
 
-        .feature img {
-            width: 100px;
-            height: 100px;
+        .feature:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature i {
+            font-size: 4em;
+            margin-bottom: 10px;
+            color: #207F7A;
         }
 
         .feature h3 {
@@ -95,8 +135,113 @@
             margin: 10px 0;
         }
 
+        .cta-section {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #207F7A;
+            color: #FFFFFF;
+            margin: 50px 0;
+            animation: fadeIn 1.5s ease-in-out;
+            border-radius: 10px;
+            max-width: 800px;
+            margin: 50px auto;
+        }
+
+        .cta-section h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        .cta-section p {
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+
+        .cta-section button {
+            background-color: #FFFFFF;
+            color: #207F7A;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .cta-section button:hover {
+            background-color: #A0E7E5;
+            transform: scale(1.1);
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+
+        .card p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+
+        .card i {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #207F7A;
+        }
+
+        .about,
+        .community {
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        .about h2,
+        .community h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .about p,
+        .community p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+
+        .discord-widget {
+            display: flex;
+            justify-content: center;
+            margin: 50px 0;
+        }
+
         footer {
-            background-color: #FF6F61;
+            background-color: #207F7A;
             color: #FFFFFF;
             text-align: center;
             padding: 20px;
@@ -106,6 +251,57 @@
             color: #FFFFFF;
             text-decoration: none;
             margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #A0E7E5;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .features {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cards {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
@@ -118,37 +314,61 @@
             <a href="#about">About</a>
             <a href="#features">Features</a>
             <a href="#community">Community</a>
-            <a href="#contact">Contact</a>
+            <a href="owners.html">Owners</a>
+            <a href="credits.html">Credits/Webdevs</a>
         </nav>
     </header>
-    <section class="hero">
-        <h2>Welcome to Social Chit Chat</h2>
-        <p>A safe and fun place for everyone to socialize.</p>
-        <button>Join Our Discord</button>
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h2>Welcome to Social Chit Chat</h2>
+            <p>Your go-to platform for making friends and having fun.</p>
+            <button onclick="location.href='https://discord.com/invite/bCwe9eM5Ve'">Join Our Discord</button>
+        </div>
     </section>
-    <section class="features" id="features">
+    <section class="features section" id="features">
         <div class="feature">
-            <img src="safe-icon.png" alt="Safe Environment">
-            <h3>Safe Environment</h3>
-            <p>Our server is moderated to ensure a safe space for all members.</p>
+            <i class="fas fa-users"></i>
+            <h3>Connect</h3>
+            <p>Meet new friends and stay connected.</p>
         </div>
         <div class="feature">
-            <img src="inclusive-icon.png" alt="Inclusive Community">
-            <h3>Inclusive Community</h3>
-            <p>Everyone is welcome here, regardless of background.</p>
+            <i class="fas fa-comments"></i>
+            <h3>Chat</h3>
+            <p>Engage in interesting conversations.</p>
         </div>
         <div class="feature">
-            <img src="events-icon.png" alt="Fun Events">
-            <h3>Fun Events</h3>
-            <p>We host regular events to keep the community engaged and entertained.</p>
+            <i class="fas fa-calendar-alt"></i>
+            <h3>Events</h3>
+            <p>Participate in exclusive events.</p>
         </div>
+    </section>
+    <section class="about section" id="about">
+        <h2>About Us</h2>
+        <p>Social Chit Chat is a platform dedicated to fostering connections and building communities through engaging
+            and interactive discussions.</p>
+    </section>
+    <section class="community section" id="community">
+        <h2>Our Community</h2>
+        <p>Explore our vibrant community on Discord. Click the button below to join.</p>
+        <div class="discord-widget">
+            <iframe src="https://discord.com/widget?id=1209245138338185236&theme=light" width="500" height="500"
+                allowtransparency="true" frameborder="0"></iframe>
+        </div>
+    </section>
+    <section class="cta-section">
+        <h2>Join Our Community Today!</h2>
+        <p>Click the button below to be part of our growing community.</p>
+        <button onclick="location.href='https://discord.com/invite/bCwe9eM5Ve'">Join Now</button>
     </section>
     <footer>
-        <p>&copy; 2024 Social Chit Chat. All rights reserved.</p>
-        <p>
-            <a href="#terms">Terms of Service</a> |
-            <a href="#privacy">Privacy Policy</a>
-        </p>
+        <p>&copy; 2024 Social Chit Chat. All rights reserved. Created by src</p>
+        <div>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#features">Features</a>
+            <a href="#community">Community</a>
+            <a href="owners.html">Owners</a>
+        </div>
     </footer>
 </body>
 

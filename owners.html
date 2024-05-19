@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owners - Social Chit Chat</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+            scroll-behavior: smooth;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #207F7A;
+            /* Dark Turquoise */
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-family: 'Poppins', sans-serif;
+            color: #FFFFFF;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #FFFFFF;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #A0E7E5;
+            /* Light Turquoise */
+        }
+
+        .staff-section {
+            flex: 1;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .staff-section h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .staff-section p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            width: 200px;
+            height: 300px;
+            background: #f5f5f5;
+            padding: 20px;
+            transition: box-shadow .3s ease, transform .2s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-avatar {
+            --size: 80px;
+            background: linear-gradient(to top, #f1e1c1 0%, #fcbc97 100%);
+            width: var(--size);
+            height: var(--size);
+            border-radius: 50%;
+            transition: transform .2s ease;
+            margin-bottom: 1rem;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .card-title {
+            color: #333;
+            font-size: 1.5em;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+
+        .card-subtitle {
+            color: #859ba8;
+            font-size: 0.8em;
+            margin-bottom: 20px;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 50px #23232333;
+            transform: translateY(-10px);
+        }
+
+        .card-avatar:hover {
+            transform: scale(1.1);
+        }
+
+        footer {
+            background-color: #207F7A;
+            /* Dark Turquoise */
+            color: #FFFFFF;
+            text-align: center;
+            padding: 20px;
+            margin-top: auto;
+        }
+
+        footer a {
+            color: #FFFFFF;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #A0E7E5;
+            /* Light Turquoise */
+        }
+
+        @media (max-width: 768px) {
+            .cards {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Social Chit Chat</h1>
+        <nav>
+            <a href="index.html#home">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#features">Features</a>
+            <a href="index.html#community">Community</a>
+            <a href="owners.html">Owners</a>
+            <a href="credits.html">Credits/Webdevs</a>
+        </nav>
+    </header>
+    <section class="staff-section" id="staff">
+        <h2>Meet Our Owners</h2>
+        <p>The very start and reason for this amazing community!</p>
+        <div class="cards">
+            <div class="card">
+                <div class="card-avatar"
+                    style="background-image: url('https://cdn.discordapp.com/avatars/206842581382856705/c5987896724292536ff6306f9be802be.png?size=1024')">
+                </div>
+                <div class="card-title">𝔾𝔼ℕ. 𝕎𝕀𝕃𝕃</div>
+                <div class="card-subtitle">CEO &amp; Co-Founder</div>
+            </div>
+            <div class="card">
+                <div class="card-avatar"
+                    style="background-image: url('https://cdn.discordapp.com/avatars/1209240517993304145/4d419e2ae856fe1d975d8312ec26e976.png?size=1024')">
+                </div>
+                <div class="card-title">𝓟𝓻𝓲𝓷𝓬𝓮𝓼𝓼</div>
+                <div class="card-subtitle">Founder</div>
+            </div>
+            <!-- Add more card elements for other staff members if needed -->
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Social Chit Chat. All rights reserved. Created by src</p>
+        <p>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact Us</a>
+        </p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+/* Basic styles for header, main, and footer */
+header,
+footer {
+    background-color: #FF6F61;
+    color: #FFFFFF;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Style for each staff member card */
+.staff-card {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.staff-card h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.staff-card p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.staff-card img {
+    width: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}

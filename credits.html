@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credits - Social Chit Chat</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FFFFFF;
+            /* White */
+            color: #FFFFFF;
+            /* White text */
+            scroll-behavior: smooth;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #207F7A;
+            /* Dark Turquoise */
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-family: 'Poppins', sans-serif;
+            color: #FFFFFF;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+
+        nav a {
+            color: #FFFFFF;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #FFEB3B;
+        }
+
+        .credits-section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .credits-section h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .credits-section p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            width: 200px;
+            height: 300px;
+            background: #f5f5f5;
+            padding: 20px;
+            transition: box-shadow .3s ease, transform .2s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-avatar {
+            --size: 80px;
+            background: linear-gradient(to top, #f1e1c1 0%, #fcbc97 100%);
+            width: var(--size);
+            height: var(--size);
+            border-radius: 50%;
+            transition: transform .2s ease;
+            margin-bottom: 1rem;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .card-title {
+            color: #333;
+            font-size: 1.5em;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+
+        .card-subtitle {
+            color: #859ba8;
+            font-size: 0.8em;
+            margin-bottom: 20px;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 50px #23232333;
+            transform: translateY(-10px);
+        }
+
+        .card-avatar:hover {
+            transform: scale(1.1);
+        }
+
+        footer {
+            background-color: #207F7A;
+            /* Dark Turquoise */
+            color: #FFFFFF;
+            text-align: center;
+            padding: 20px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: #FFFFFF;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #FF6F61;
+        }
+
+        @media (max-width: 768px) {
+            .cards {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Social Chit Chat</h1>
+        <nav>
+            <a href="index.html#home">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#features">Features</a>
+            <a href="index.html#community">Community</a>
+            <a href="staff.html">Staff</a>
+            <a href="credits.html">Credits/Webdevs</a>
+
+        </nav>
+    </header>
+    <section class="credits-section" id="credits">
+        <h2>Credits</h2>
+        <p>Special thanks to our contributors.</p>
+        <div class="cards">
+            <div class="card">
+                <div class="card-avatar"
+                    style="background-image: url('https://cdn.discordapp.com/avatars/1231182903355117599/ae83cf080faa71848bb6e9f36e24d17a.png?size=1024')">
+                </div>
+                <div class="card-title">blzsrc</div>
+                <div class="card-subtitle">👑 @src</div>
+                <div class="card-subtitle"><a href="https://e-z.bio/blzsrc">https://e-z.bio/blzsrc</a></div>
+                <div class="card-subtitle"><a href="https://discord.gg/DXWEb8Sh">https://discord.gg/DXWEb8Sh</a></div>
+                <div class="card-subtitle"><a href="https://amitermed.com/YlSG8Q">https://amitermed.com/YlSG8Q</a></div>
+            </div>
+            <div class="card">
+                <div class="card-avatar"
+                    style="background-image: url('https://cdn.discordapp.com/avatars/885313174377730128/50968e19f3bb9eb1aff5395ec56bf24a.png?size=1024')">
+                </div>
+                <div class="card-title">Yusef</div>
+                <div class="card-subtitle">Elia &gt;&gt;&gt;</div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>We developed this website.</p>
+        <p>&copy; 2024 Social Chit Chat. All rights reserved. Created by src</p>
+
+    </footer>
+</body>
+
+</html>
